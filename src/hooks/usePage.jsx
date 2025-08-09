@@ -1,5 +1,6 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { pages } from "../components/Header/pages";
+import NotFound from "../components/NotFound";
 
 export const useLocation = () => {
   const [pathname, setPathname] = useState(window.location.pathname);
@@ -21,8 +22,6 @@ export const useLocation = () => {
 
   return { pathname, navigate };
 };
-
-const NotFound = () => <label>Página não encontrada</label>;
 
 export const CurrentPage = () => {
   const { pathname } = useLocation();

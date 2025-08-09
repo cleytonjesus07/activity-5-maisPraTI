@@ -16,6 +16,10 @@ export default function MovieDetails() {
       try {
         setIsLoading(true);
         const movieData = await getMovieById(id);
+        if (typeof movieData === "undefined") {
+          navigate("/");
+          return window.location.reload();
+        }
         setMovie(movieData);
       } catch (error) {
         console.error("Erro ao buscar filme:", error);
@@ -28,7 +32,7 @@ export default function MovieDetails() {
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
 
-    if (!id) {
+    if (!id || typeof id === "undefined") {
       navigate("/");
       window.location.reload();
     } else {
