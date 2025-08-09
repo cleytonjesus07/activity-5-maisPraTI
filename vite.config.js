@@ -4,4 +4,5 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [tailwindcss(), react()],
+  base: "https://activity-5-mais-pra-ddhg20hrb-cleytonjesus07s-projects.vercel.app/",
 });
