@@ -30,6 +30,7 @@ export default function MovieDetails() {
 
     if (!id) {
       navigate("/");
+      window.location.reload();
     } else {
       fetchMovie(id);
     }
