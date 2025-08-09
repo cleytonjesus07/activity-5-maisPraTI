@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [tailwindcss(), react()],
-  base: "https://cleytonjesus07.github.io/activity-5-mais-pra-ti/",
+  base: "https://activity-5-mais-pra-ti.vercel.app/",
   build: {
     rollupOptions: {
       input: {
