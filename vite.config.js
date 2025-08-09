@@ -1,0 +1,18 @@
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
+import tailwindcss from "@tailwindcss/vite";
+
+export default defineConfig({
+  plugins: [tailwindcss(), react()],
+  base: "https://cleytonjesus07.github.io/activity-5-mais-pra-ti/",
+  build: {
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, "index.html"), // Página inicial
+        favorites: path.resolve(__dirname, "src/components/MyFavorites"), // Página "Sobre"
+        movieDetails: path.resolve(__dirname, "src/components/MovieDetails"), // Página "Contato"
+      },
+    },
+  },
+});
