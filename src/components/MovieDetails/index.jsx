@@ -173,7 +173,7 @@ function MovieDetailsView({ movie }) {
                 {movie.directors.map((director) => (
                   <div key={director.id} className="flex flex-col items-center">
                     <img
-                      className="w-full h-[120px] sm:h-[150px] object-cover rounded-lg shadow-sm"
+                      className="w-full h-auto max-h-[300px] object-cover rounded-lg shadow-sm"
                       src={
                         director.primaryImage?.url ||
                         "https://placehold.co/300x450"
@@ -200,7 +200,7 @@ function MovieDetailsView({ movie }) {
                 {movie.stars.map((star) => (
                   <div key={star.id} className="flex flex-col items-center">
                     <img
-                      className="w-full h-[120px] sm:h-[150px] object-cover rounded-lg shadow-sm"
+                      className="w-full h-auto max-h-[300px]  object-cover rounded-lg shadow-sm"
                       src={
                         star.primaryImage?.url || "https://placehold.co/300x450"
                       }

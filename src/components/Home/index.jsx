@@ -150,12 +150,12 @@ export default function Index() {
                 currentPage <= 1
                   ? "bg-gray-400 cursor-not-allowed"
                   : "bg-orange-400 hover:opacity-100 cursor-pointer"
-              } p-1 sm:p-2 rounded-lg font-bold opacity-50 transition-opacity ease-in-out disabled:opacity-30 text-xs sm:text-base`}
+              } p-1 sm:p-2 max-sm:p-3 rounded-lg font-bold opacity-50 transition-opacity ease-in-out disabled:opacity-30 text-xs sm:text-base`}
             >
               {"<"}
             </button>
 
-            <div className="flex flex-wrap justify-center gap-1 sm:gap-2">
+            <div className="flex flex-wrap justify-center gap-1 max-sm:gap-3 sm:gap-2">
               {Array.from({ length: Math.min(totalPages, 5) }, (_, i) => (
                 <button
                   key={i}
@@ -165,7 +165,7 @@ export default function Index() {
                     currentPage === i + 1
                       ? "bg-blue-400 font-bold text-white"
                       : "text-orange-400"
-                  } flex w-5 h-5 sm:w-6 sm:h-6 justify-center items-center rounded-lg disabled:opacity-30 text-xs sm:text-sm`}
+                  } flex max-sm:p-3 w-5 h-5 sm:w-6 sm:h-6 justify-center items-center rounded-lg disabled:opacity-30 text-xs sm:text-sm`}
                 >
                   {i + 1}
                 </button>
@@ -184,7 +184,7 @@ export default function Index() {
                 currentPage >= totalPages
                   ? "bg-gray-400 cursor-not-allowed"
                   : "bg-orange-400 hover:opacity-100 cursor-pointer"
-              } p-1 sm:p-2 rounded-lg font-bold opacity-50 transition-opacity ease-in-out disabled:opacity-30 text-xs sm:text-base`}
+              } p-1 sm:p-2 max-sm:p-3 rounded-lg font-bold opacity-50 transition-opacity ease-in-out disabled:opacity-30 text-xs sm:text-base`}
             >
               {">"}
             </button>

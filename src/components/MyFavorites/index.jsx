@@ -19,7 +19,7 @@ function MovieCard({ movie, onRemoveFavorite }) {
       <a href={link} aria-label={`Ver detalhes de ${title}`}>
         <div
           style={cardStyle}
-          className="relative h-[300px] sm:h-[350px] md:h-[400px] w-full bg-cover bg-center bg-no-repeat"
+          className="relative h-[400px] sm:h-[350px] md:h-[400px] w-full bg-cover bg-center bg-no-repeat"
         >
           <div className="absolute inset-0 border-4 sm:border-6 md:border-8 border-orange-400 bg-opacity-40 transition-opacity duration-300 group-hover:bg-opacity-20" />
         </div>
